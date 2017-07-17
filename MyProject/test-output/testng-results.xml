@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20462" started-at="2017-07-17T06:11:34Z" finished-at="2017-07-17T06:11:54Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20462" started-at="2017-07-17T06:11:34Z" finished-at="2017-07-17T06:11:54Z">
+      <class name="MyPackage.SetPersonalSettings">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.SetPersonalSettings@34b7ac2f]" name="instantiate" is-config="true" duration-ms="4276" started-at="2017-07-17T14:11:34Z" finished-at="2017-07-17T14:11:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instantiate -->
+        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.SetPersonalSettings@34b7ac2f]" name="LogintoSystem" duration-ms="13423" started-at="2017-07-17T14:11:38Z" finished-at="2017-07-17T14:11:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogintoSystem -->
+        <test-method status="PASS" signature="go2personalsettings()[pri:0, instance:MyPackage.SetPersonalSettings@34b7ac2f]" name="go2personalsettings" duration-ms="2509" started-at="2017-07-17T14:11:52Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-17T14:11:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- go2personalsettings -->
+        <test-method status="PASS" signature="setru()[pri:0, instance:MyPackage.SetPersonalSettings@34b7ac2f]" name="setru" duration-ms="182" started-at="2017-07-17T14:11:54Z" depends-on-methods="MyPackage.SetPersonalSettings.go2personalsettings" finished-at="2017-07-17T14:11:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setru -->
+        <test-method status="PASS" signature="save()[pri:0, instance:MyPackage.SetPersonalSettings@34b7ac2f]" name="save" duration-ms="42" started-at="2017-07-17T14:11:54Z" depends-on-methods="MyPackage.SetPersonalSettings.setru" finished-at="2017-07-17T14:11:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- save -->
+      </class> <!-- MyPackage.SetPersonalSettings -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
