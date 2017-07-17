@@ -10,17 +10,7 @@ import MyPackage.MessageBoard;
 
 public  class SetPersonalSettings extends MessageBoard
 {
-	  @Test(dependsOnMethods={"LogintoSystem"})
-	  void go2personalsettings()
-	  {
-	      WebElement element=driver.findElement(By.id("PageHeaderTopNavigationMenu_11"));
-	  
-	      Actions action=new Actions(driver);
-	      WebElement Psettings=driver.findElement(By.xpath("//tr[@id='PageHeaderTopNavigationMenu_11_3']"));
-	                   
-	      action.moveToElement(element).moveToElement(Psettings).click().perform();
-	  }
-	  
+		//Song: code change version 3 from Song...
 	  @Test(dependsOnMethods={"LogintoSystem"})
 	  void go2personalsettings()
 	  {
