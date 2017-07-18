@@ -1,6 +1,7 @@
 package MyPackage;
 
 import org.testng.annotations.Test;
+import java.util.Map;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,13 +11,19 @@ import Chrome_Automation.Userlogin;
 public class MessageBoard {
 	
 	WebDriver driver;
+	Driver dr;
+	Map<String, String> mp;
 	
 	@BeforeTest
 	public void instantiate()
 	{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("chrome.switches","--disable-extensions");
-		System.setProperty("webdriver.chrome.driver", "C:\\Eclipse\\chromedriver.exe");
+		
+		dr=new Driver("C:\\selenium\\drv.xlsx");
+		mp = dr.getMap();
+		System.setProperty(mp.get("webdriver"), mp.get("driverlocation"));
+
 		driver = new ChromeDriver(options);
 	}
 	
@@ -24,7 +31,7 @@ public class MessageBoard {
 	public void LogintoSystem()
 	{
 		driver.manage().window().maximize();
-		driver.get("http://153.112.61.197/vss_connect_testr1/Login/Login.aspx?nextview=Welcome");
-		Userlogin login=new Userlogin("TYP40US","Mack",driver);	
+		driver.get(mp.get("url"));
+		Userlogin login=new Userlogin(mp.get("username"), mp.get("brand"), driver);	
 	}
 }

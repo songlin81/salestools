@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="sources"/>
 	<classpathentry kind="lib" path="C:/selenium/client-combined-3.4.0-nodeps.jar"/>
 	<classpathentry kind="lib" path="C:/selenium/lib/cglib-nodep-3.2.4.jar"/>
 	<classpathentry kind="lib" path="C:/selenium/lib/commons-codec-1.10.jar"/>
@@ -42,6 +43,7 @@
 	<classpathentry kind="lib" path="C:/software/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-3.16.jar"/>
 	<classpathentry kind="lib" path="C:/software/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-schemas-3.16.jar"/>
 	<classpathentry kind="lib" path="C:/software/poi-bin-3.16-20170419/poi-3.16/poi-scratchpad-3.16.jar"/>
-	<classpathentry kind="lib" path="C:/selenium/Framework/lib/xmlbeans-2.3.0.jar.zip"/>
+	<classpathentry kind="lib" path="C:/selenium/Framework/lib/xmlbeans-2.3.0.jar/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/selenium/Framework/lib/commons-collections4-4.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

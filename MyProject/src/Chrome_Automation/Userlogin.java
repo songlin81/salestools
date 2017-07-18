@@ -4,13 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-
-
-
-
 //@SuppressWarnings("unused")
 public class Userlogin {
-	
 	
 	public Userlogin(String UserName,String BrandName,WebDriver Driver)
 	{
@@ -21,15 +16,13 @@ public class Userlogin {
 		String Title=Driver.getTitle();
 		if(!Driver.findElements(By.id("Cancel")).isEmpty())
 		{
-		Driver.findElement(By.id("Cancel")).click();
+			Driver.findElement(By.id("Cancel")).click();
 		}
 		
-	if(!Title.contains("VSS 4"))
+		if(!Title.contains("VSS 4"))
 		{
-	System.out.println(UserName+""+"does not exists");
-	Driver.quit();
-	
+			System.out.println(UserName+""+"does not exists");
+			Driver.quit();
 		}
-		
 	}
-	} 
+} 

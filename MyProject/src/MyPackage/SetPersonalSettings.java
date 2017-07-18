@@ -16,10 +16,10 @@ public  class SetPersonalSettings extends MessageBoard
 	  void go2personalsettings()
 	  {
 	      WebElement element=driver.findElement(By.id("PageHeaderTopNavigationMenu_11"));
-	  
+
 	      Actions action=new Actions(driver);
 	      WebElement Psettings=driver.findElement(By.xpath("//tr[@id='PageHeaderTopNavigationMenu_11_3']"));
-	                   
+
 	      action.moveToElement(element).moveToElement(Psettings).click().perform();
 	  }
 	  
