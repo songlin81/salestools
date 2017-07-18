@@ -8,7 +8,9 @@ import org.testng.annotations.BeforeTest;
 import Chrome_Automation.Userlogin;
 
 public class MessageBoard {
+	
 	WebDriver driver;
+	
 	@BeforeTest
 	public void instantiate()
 	{
@@ -17,6 +19,7 @@ public class MessageBoard {
 		System.setProperty("webdriver.chrome.driver", "C:\\Eclipse\\chromedriver.exe");
 		driver = new ChromeDriver(options);
 	}
+	
 	@Test
 	public void LogintoSystem()
 	{

@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 
 import MyPackage.MessageBoard;
 
 public  class SetPersonalSettings extends MessageBoard
 {
-		//Song: code change version 3 from Song...
 	  @Test(dependsOnMethods={"LogintoSystem"})
 	  void go2personalsettings()
 	  {
@@ -21,7 +22,6 @@ public  class SetPersonalSettings extends MessageBoard
 	                   
 	      action.moveToElement(element).moveToElement(Psettings).click().perform();
 	  }
-	  
 	  
 	  @Test(dependsOnMethods={"go2personalsettings"})
 	  void setru()
@@ -39,6 +39,14 @@ public  class SetPersonalSettings extends MessageBoard
 	         {
 	               save.click();
 	         }
+	         
+	         // TODO: log for report output
+	         Reporter.log("RUSetting saved and Application is closed");
+	         
+	         // Assertion for TC
+		     Select rudropdown=new Select(driver.findElement(By.id("DefaultOrganisationDropDown")));
+	         WebElement option = rudropdown.getFirstSelectedOption();
+	         Assert.assertEquals("999425, NEXTRAN CORPORATION - JACKSONVILLE, ", option.getText());
 	  }     
 }      
        
