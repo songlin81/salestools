@@ -20,12 +20,13 @@ C:\Git\MyProject\src\MyPackage\MessageBoard.java ^
 C:\Git\MyProject\src\MyPackage\SetPersonalSettings.java
 
 Java -cp C:\Git\MyProject\libs\*;C:\Git\MyProject\bin org.testng.TestNG testng.xml
---Above is giving below...ISSUE UNSOLEVED YET!
+
+-- Below ISSUE SOLEVED! Ensure libs contain all reference assemblies.
 ===============================================
 Suite
 Total tests run: 0, Failures: 0, Skips: 0
 ===============================================
-
+SOLVED--2017-07-19
 
 ------ 2. working sample, just assertion no web driver ----------------------------------------------------------
 testng.xml
@@ -128,3 +129,10 @@ public class jenkins_demo {
 
 
 ------------ 6. working sample, with main class, extract to jar -------------------------------------------------
+
+
+------------ 7. tba -------------------------------------------------
+
+
+
+
