@@ -1,12 +1,20 @@
 package MyPackage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.Assert;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 
 import MyPackage.MessageBoard;
 
@@ -48,8 +56,27 @@ public  class SetPersonalSettings extends MessageBoard
 	         WebElement option = rudropdown.getFirstSelectedOption();
 	         Assert.assertEquals("999425, NEXTRAN CORPORATION - JACKSONVILLE, ", option.getText());
 	         
+	         getscreenshot();
+	         
 	         driver.quit();
-	  }     
+	  }
+	  
+		@AfterClass
+		public void tearDown() {
+			if(driver!=null) {
+				driver.quit();
+			}
+		}
+		
+		public void getscreenshot()
+		{
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(scrFile, new File("C:\\selenium\\screenshot.png"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 }      
        
                      

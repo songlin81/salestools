@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
     <line>
       <![CDATA[RUSetting saved and Application is closed]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="41365" started-at="2017-07-19T11:25:14Z" finished-at="2017-07-19T11:25:56Z">
+  <suite name="Default suite" duration-ms="22167" started-at="2017-07-19T12:28:39Z" finished-at="2017-07-19T12:29:01Z">
     <groups>
     </groups>
-    <test name="Landing test" duration-ms="21890" started-at="2017-07-19T11:25:14Z" finished-at="2017-07-19T11:25:36Z">
-      <class name="MyPackage.MessageBoard">
-        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.MessageBoard@26653222]" name="instantiate" is-config="true" duration-ms="4875" started-at="2017-07-19T19:25:14Z" finished-at="2017-07-19T19:25:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- instantiate -->
-        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.MessageBoard@26653222]" name="LogintoSystem" duration-ms="16976" started-at="2017-07-19T19:25:19Z" finished-at="2017-07-19T19:25:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogintoSystem -->
-      </class> <!-- MyPackage.MessageBoard -->
-    </test> <!-- Landing test -->
-    <test name="RU test" duration-ms="19407" started-at="2017-07-19T11:25:36Z" finished-at="2017-07-19T11:25:56Z">
+    <test name="Default test" duration-ms="22167" started-at="2017-07-19T12:28:39Z" finished-at="2017-07-19T12:29:01Z">
       <class name="MyPackage.SetPersonalSettings">
-        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="instantiate" is-config="true" duration-ms="2821" started-at="2017-07-19T19:25:36Z" finished-at="2017-07-19T19:25:39Z">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="instantiate" is-config="true" duration-ms="666" started-at="2017-07-19T20:28:39Z" finished-at="2017-07-19T20:28:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiate -->
-        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="LogintoSystem" duration-ms="11711" started-at="2017-07-19T19:25:39Z" finished-at="2017-07-19T19:25:51Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="setUp" is-config="true" duration-ms="4205" started-at="2017-07-19T20:28:40Z" finished-at="2017-07-19T20:28:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="LogintoSystem" duration-ms="13790" started-at="2017-07-19T20:28:44Z" finished-at="2017-07-19T20:28:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogintoSystem -->
-        <test-method status="PASS" signature="go2personalsettings()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="go2personalsettings" duration-ms="1852" started-at="2017-07-19T19:25:51Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-19T19:25:53Z">
+        <test-method status="PASS" signature="go2personalsettings()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="go2personalsettings" duration-ms="1434" started-at="2017-07-19T20:28:58Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-19T20:28:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- go2personalsettings -->
-        <test-method status="PASS" signature="setru()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="setru" duration-ms="1827" started-at="2017-07-19T19:25:53Z" depends-on-methods="MyPackage.SetPersonalSettings.go2personalsettings" finished-at="2017-07-19T19:25:54Z">
+        <test-method status="PASS" signature="setru()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="setru" duration-ms="139" started-at="2017-07-19T20:28:59Z" depends-on-methods="MyPackage.SetPersonalSettings.go2personalsettings" finished-at="2017-07-19T20:28:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setru -->
-        <test-method status="PASS" signature="save()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="save" duration-ms="1192" started-at="2017-07-19T19:25:54Z" depends-on-methods="MyPackage.SetPersonalSettings.setru" finished-at="2017-07-19T19:25:56Z">
+        <test-method status="PASS" signature="save()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="save" duration-ms="1900" started-at="2017-07-19T20:28:59Z" depends-on-methods="MyPackage.SetPersonalSettings.setru" finished-at="2017-07-19T20:29:01Z">
           <reporter-output>
             <line>
               <![CDATA[RUSetting saved and Application is closed]]>
             </line>
           </reporter-output>
         </test-method> <!-- save -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="tearDown" is-config="true" duration-ms="1" started-at="2017-07-19T20:29:01Z" finished-at="2017-07-19T20:29:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- MyPackage.SetPersonalSettings -->
-    </test> <!-- RU test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

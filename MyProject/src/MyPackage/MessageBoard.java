@@ -3,11 +3,9 @@ package MyPackage;
 import org.testng.annotations.Test;
 import java.util.Map;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-
+import Chrome_Automation.Browser;
 import Chrome_Automation.Userlogin;
 
 public class MessageBoard {
@@ -16,17 +14,16 @@ public class MessageBoard {
 	Driver dr;
 	Map<String, String> mp;
 
+	@BeforeClass
+	public void setUp() {
+		driver = Browser.getBrowser("chrome");
+	}
+	
 	@BeforeTest
 	public void instantiate()
-	{
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("chrome.switches","--disable-extensions");
-		
+	{	
 		dr=new Driver("C:\\selenium\\drv.xlsx");
 		mp = dr.getMap();
-		System.setProperty(mp.get("webdriver"), mp.get("driverlocation"));
-
-		driver = new ChromeDriver(options);
 	}
 	
 	@Test(enabled = true)
