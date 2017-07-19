@@ -47,6 +47,8 @@ public  class SetPersonalSettings extends MessageBoard
 		     Select rudropdown=new Select(driver.findElement(By.id("DefaultOrganisationDropDown")));
 	         WebElement option = rudropdown.getFirstSelectedOption();
 	         Assert.assertEquals("999425, NEXTRAN CORPORATION - JACKSONVILLE, ", option.getText());
+	         
+	         driver.quit();
 	  }     
 }      
        

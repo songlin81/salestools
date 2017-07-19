@@ -1,21 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
+    <line>
+      <![CDATA[RUSetting saved and Application is closed]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20611" started-at="2017-07-19T09:11:41Z" finished-at="2017-07-19T09:12:02Z">
+  <suite name="Suite" duration-ms="41365" started-at="2017-07-19T11:25:14Z" finished-at="2017-07-19T11:25:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20611" started-at="2017-07-19T09:11:41Z" finished-at="2017-07-19T09:12:02Z">
+    <test name="Landing test" duration-ms="21890" started-at="2017-07-19T11:25:14Z" finished-at="2017-07-19T11:25:36Z">
       <class name="MyPackage.MessageBoard">
-        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.MessageBoard@26653222]" name="instantiate" is-config="true" duration-ms="4715" started-at="2017-07-19T17:11:42Z" finished-at="2017-07-19T17:11:46Z">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.MessageBoard@26653222]" name="instantiate" is-config="true" duration-ms="4875" started-at="2017-07-19T19:25:14Z" finished-at="2017-07-19T19:25:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiate -->
-        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.MessageBoard@26653222]" name="LogintoSystem" duration-ms="15862" started-at="2017-07-19T17:11:46Z" finished-at="2017-07-19T17:12:02Z">
+        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.MessageBoard@26653222]" name="LogintoSystem" duration-ms="16976" started-at="2017-07-19T19:25:19Z" finished-at="2017-07-19T19:25:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogintoSystem -->
       </class> <!-- MyPackage.MessageBoard -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Landing test -->
+    <test name="RU test" duration-ms="19407" started-at="2017-07-19T11:25:36Z" finished-at="2017-07-19T11:25:56Z">
+      <class name="MyPackage.SetPersonalSettings">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="instantiate" is-config="true" duration-ms="2821" started-at="2017-07-19T19:25:36Z" finished-at="2017-07-19T19:25:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instantiate -->
+        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="LogintoSystem" duration-ms="11711" started-at="2017-07-19T19:25:39Z" finished-at="2017-07-19T19:25:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogintoSystem -->
+        <test-method status="PASS" signature="go2personalsettings()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="go2personalsettings" duration-ms="1852" started-at="2017-07-19T19:25:51Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-19T19:25:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- go2personalsettings -->
+        <test-method status="PASS" signature="setru()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="setru" duration-ms="1827" started-at="2017-07-19T19:25:53Z" depends-on-methods="MyPackage.SetPersonalSettings.go2personalsettings" finished-at="2017-07-19T19:25:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setru -->
+        <test-method status="PASS" signature="save()[pri:0, instance:MyPackage.SetPersonalSettings@548e7350]" name="save" duration-ms="1192" started-at="2017-07-19T19:25:54Z" depends-on-methods="MyPackage.SetPersonalSettings.setru" finished-at="2017-07-19T19:25:56Z">
+          <reporter-output>
+            <line>
+              <![CDATA[RUSetting saved and Application is closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- save -->
+      </class> <!-- MyPackage.SetPersonalSettings -->
+    </test> <!-- RU test -->
+  </suite> <!-- Suite -->
 </testng-results>
