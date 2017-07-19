@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/testng2.xml</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/testng2.xml</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
-    <parameter name="browser" value="Chrome"/>
+  <test name="For Test(failed)">
     <classes>
       <class name="MyPackage.MessageBoard">
         <methods>
@@ -11,5 +10,5 @@
         </methods>
       </class> <!-- MyPackage.MessageBoard -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- For Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

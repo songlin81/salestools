@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="19539" started-at="2017-07-19T08:47:31Z" finished-at="2017-07-19T08:47:50Z">
+    <groups>
+    </groups>
+    <test name="For Test" duration-ms="19539" started-at="2017-07-19T08:47:31Z" finished-at="2017-07-19T08:47:50Z">
+      <class name="MyPackage.MessageBoard">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.MessageBoard@4ec6a292]" name="instantiate" is-config="true" duration-ms="3829" started-at="2017-07-19T16:47:31Z" finished-at="2017-07-19T16:47:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instantiate -->
+        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.MessageBoard@4ec6a292]" name="LogintoSystem" duration-ms="15709" started-at="2017-07-19T16:47:35Z" finished-at="2017-07-19T16:47:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogintoSystem -->
+      </class> <!-- MyPackage.MessageBoard -->
+    </test> <!-- For Test -->
+  </suite> <!-- Suite -->
+</testng-results>
