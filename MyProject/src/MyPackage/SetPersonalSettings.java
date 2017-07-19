@@ -10,9 +10,9 @@ import org.testng.Assert;
 
 import MyPackage.MessageBoard;
 
-@Test
 public  class SetPersonalSettings extends MessageBoard
 {
+	  @Test(dependsOnMethods={"LogintoSystem"})
 	  void go2personalsettings()
 	  {
 	      WebElement element=driver.findElement(By.id("PageHeaderTopNavigationMenu_11"));
@@ -23,6 +23,7 @@ public  class SetPersonalSettings extends MessageBoard
 	      action.moveToElement(element).moveToElement(Psettings).click().perform();
 	  }
 	  
+	  @Test(dependsOnMethods={"go2personalsettings"})
 	  void setru()
 	  {
 	     driver.switchTo().frame("contentFrame");
@@ -30,6 +31,7 @@ public  class SetPersonalSettings extends MessageBoard
 	     rudropdown.selectByVisibleText("999425, NEXTRAN CORPORATION - JACKSONVILLE,");  
 	  }
 	  
+	  @Test(dependsOnMethods={"setru"})
 	  void save()
 	  {
 	         WebElement save=driver.findElement(By.id("SaveButton"));
