@@ -26,7 +26,8 @@ Suite
 Total tests run: 0, Failures: 0, Skips: 0
 ===============================================
 
------- 2. working sample, just assetion no web driver ----------------------------------------------------------
+
+------ 2. working sample, just assertion no web driver ----------------------------------------------------------
 testng.xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
@@ -55,7 +56,8 @@ Suite1
 Total tests run: 2, Failures: 0, Skips: 0
 ===============================================
 
------------- 4. set class path -------------------------------------------------
+
+------------ 3. set class path -------------------------------------------------
 java -cp C:\Git\MyProject\libs\*;C:\Git\MyProject\bin org.testng.TestNG testng.xml
 
 set classpath=C:\Git\MyProject\bin;C:\Git\MyProject\libs\*
@@ -63,7 +65,8 @@ set classpath=C:\Git\MyProject\bin;C:\Git\MyProject\libs\*
 --then to simplify as below
 java org.testng.TestNG testng.xml
 
------------- 5. working sample, with main class, extract to jar -------------------------------------------------
+
+------------ 4. working sample, with main class, extract to jar -------------------------------------------------
 ------------ limitation of this way: not using NGtest.xml, no test report generated -----------------------------
 package session_2;
 
@@ -119,7 +122,9 @@ public class jenkins_demo {
 	
 	c:\Git>
 
------------------ 6. In Eclipse, right click testng.xml to invoke test ------------------------------------
+
+----------------- 5. In Eclipse, right click testng.xml to invoke test ------------------------------------
 -- In Eclipse, right over testng.xml, and from contect menu hit "Run as"-->"TestNG Suite"
 
 
+------------ 6. working sample, with main class, extract to jar -------------------------------------------------

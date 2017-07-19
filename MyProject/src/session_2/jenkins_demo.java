@@ -16,16 +16,15 @@ public class jenkins_demo {
 	@Test
 	public void zipper()
 	{
-//		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("chrome.switches","--disable-extensions");
-//		System.setProperty("webdriver.chrome.driver", "C:\\\\Eclipse\\\\chromedriver.exe");	
-//		WebDriver driver = new ChromeDriver(options);
-//		driver.get("http://google.in");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("chrome.switches","--disable-extensions");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Eclipse\\\\chromedriver.exe");	
+		WebDriver driver = new ChromeDriver(options);
+		driver.get("http://google.in");
 		
 		String Expectedtitle = "Google";
 	
-		String Actualtitle = "Google"; 	
-		//String Actualtitle = driver.getTitle();
+		String Actualtitle = driver.getTitle();
 	
 		System.out.println("Before Assetion " + Expectedtitle + Actualtitle);
 	
@@ -33,7 +32,7 @@ public class jenkins_demo {
 	
 		System.out.println("After Assertion " + Expectedtitle + Actualtitle + " Title matched ");
 
-        //driver.quit();
+        driver.quit();
 	}
 	
 }
