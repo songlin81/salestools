@@ -1,0 +1,125 @@
+---- 1. Compilation to binary --------------------------------------------------------------------
+"C:\Program Files\Java\jdk1.8.0_131\bin\javac.exe" ^
+-cp C:\software\selenium-server-standalone-3.4.0.jar ^
+C:\Git\MyProject\src\Chrome_Automation\Userlogin.java
+
+"C:\Program Files\Java\jdk1.8.0_131\bin\javac.exe" ^
+-cp C:\software\selenium-server-standalone-3.4.0.jar;^
+C:\software\poi-bin-3.16-20170419\poi-3.16\poi-3.16.jar;^
+C:\software\poi-bin-3.16-20170419\poi-3.16\poi-ooxml-3.16.jar ^
+C:\Git\MyProject\src\MyPackage\Driver.java
+
+"C:\Program Files\Java\jdk1.8.0_131\bin\javac.exe" -cp ^
+C:\software\selenium-server-standalone-3.4.0.jar;^
+C:/Users/v0cn140/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar;^
+C:\software\poi-bin-3.16-20170419\poi-3.16\poi-3.16.jar;^
+C:\software\poi-bin-3.16-20170419\poi-3.16\poi-ooxml-3.16.jar ^
+C:\Git\MyProject\src\Chrome_Automation\Userlogin.java ^
+C:\Git\MyProject\src\MyPackage\Driver.java ^
+C:\Git\MyProject\src\MyPackage\MessageBoard.java ^
+C:\Git\MyProject\src\MyPackage\SetPersonalSettings.java
+
+Java -cp C:\Git\MyProject\libs\*;C:\Git\MyProject\bin org.testng.TestNG testng.xml
+--Above is giving below...ISSUE UNSOLEVED YET!
+===============================================
+Suite
+Total tests run: 0, Failures: 0, Skips: 0
+===============================================
+
+------ 2. working sample, just assetion no web driver ----------------------------------------------------------
+testng.xml
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+	<suite name="Suite1">
+	  <test name="exampletest1">
+	    <classes>
+	       <class name="Test1" />
+	    </classes>
+	  </test>
+	  <test name="exampletest2">
+	    <classes>
+	       <class name="Test2" />
+	    </classes>
+	  </test>
+	</suite> 
+
+"C:\Program Files\Java\jdk1.8.0_131\bin\javac.exe" -cp C:/Users/v0cn140/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar MessageUtil.java Test1.java Test2.java
+
+c:\Git\MyProject>java -cp C:\Git\MyProject\libs\*;C:\Git\MyProject\bin org.testng.TestNG testng.xml
+	Inside testPrintMessage()
+	Manisha
+	Inside testSalutationMessage()
+	Hi!Manisha
+===============================================
+Suite1
+Total tests run: 2, Failures: 0, Skips: 0
+===============================================
+
+------------ 4. set class path -------------------------------------------------
+java -cp C:\Git\MyProject\libs\*;C:\Git\MyProject\bin org.testng.TestNG testng.xml
+
+set classpath=C:\Git\MyProject\bin;C:\Git\MyProject\libs\*
+
+--then to simplify as below
+java org.testng.TestNG testng.xml
+
+------------ 5. working sample, with main class, extract to jar -------------------------------------------------
+------------ limitation of this way: not using NGtest.xml, no test report generated -----------------------------
+package session_2;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class jenkins_demo {
+
+    public static void main(String[] args) {
+    	jenkins_demo jd=new jenkins_demo();
+    	jd.zipper();
+    }
+    
+	@Test
+	public void zipper()
+	{
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("chrome.switches","--disable-extensions");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Eclipse\\\\chromedriver.exe");	
+		WebDriver driver = new ChromeDriver(options);
+		driver.get("http://google.in");
+		
+		String Expectedtitle = "Google";
+	 	
+		String Actualtitle = driver.getTitle();
+	
+		System.out.println("Before Assetion " + Expectedtitle + Actualtitle);
+	
+		Assert.assertEquals(Actualtitle, Expectedtitle);
+	
+		System.out.println("After Assertion " + Expectedtitle + Actualtitle + " Title matched ");
+
+        driver.quit();
+	}
+}
+
+-- Next build the project, and then export it to a runnable jar file 
+-- refer to your IDE documentation to know how to do it 
+-- (in Eclipse click options: File/Export/Java/Runnable JAR file, choose the option "Package required libraries into generated JAR").
+
+	c:\Git>java -jar jk.jar
+	Starting ChromeDriver 2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41) on
+	port 42016
+	Only local connections are allowed.
+	Jul 19, 2017 2:14:56 PM org.openqa.selenium.remote.ProtocolHandshake createSessi
+	on
+	INFO: Detected dialect: OSS
+	Before Assetion GoogleGoogle
+	After Assertion GoogleGoogle Title matched
+	
+	c:\Git>
+
+----------------- 6. In Eclipse, right click testng.xml to invoke test ------------------------------------
+-- In Eclipse, right over testng.xml, and from contect menu hit "Run as"-->"TestNG Suite"
+
+

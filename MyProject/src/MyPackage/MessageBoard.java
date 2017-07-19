@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+
 import Chrome_Automation.Userlogin;
 
 public class MessageBoard {
@@ -13,7 +15,7 @@ public class MessageBoard {
 	WebDriver driver;
 	Driver dr;
 	Map<String, String> mp;
-	
+
 	@BeforeTest
 	public void instantiate()
 	{
@@ -27,7 +29,7 @@ public class MessageBoard {
 		driver = new ChromeDriver(options);
 	}
 	
-	@Test
+	@Test(enabled = true)
 	public void LogintoSystem()
 	{
 		driver.manage().window().maximize();

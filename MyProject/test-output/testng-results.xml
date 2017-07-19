@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18868" started-at="2017-07-18T08:28:22Z" finished-at="2017-07-18T08:28:41Z">
+  <suite name="Suite" duration-ms="23" started-at="2017-07-19T05:48:37Z" finished-at="2017-07-19T05:48:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18868" started-at="2017-07-18T08:28:22Z" finished-at="2017-07-18T08:28:41Z">
-      <class name="MyPackage.MessageBoard">
-        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.MessageBoard@26653222]" name="instantiate" is-config="true" duration-ms="4797" started-at="2017-07-18T16:28:22Z" finished-at="2017-07-18T16:28:27Z">
+    <test name="Test" duration-ms="23" started-at="2017-07-19T05:48:37Z" finished-at="2017-07-19T05:48:37Z">
+      <class name="session_2.jenkins_demo">
+        <test-method status="PASS" signature="zipper()[pri:0, instance:session_2.jenkins_demo@63d4e2ba]" name="zipper" duration-ms="7" started-at="2017-07-19T13:48:37Z" finished-at="2017-07-19T13:48:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- instantiate -->
-        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.MessageBoard@26653222]" name="LogintoSystem" duration-ms="14050" started-at="2017-07-18T16:28:27Z" finished-at="2017-07-18T16:28:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogintoSystem -->
-      </class> <!-- MyPackage.MessageBoard -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- zipper -->
+      </class> <!-- session_2.jenkins_demo -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
