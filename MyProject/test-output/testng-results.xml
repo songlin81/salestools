@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
-    <line>
-      <![CDATA[RUSetting saved and Application is closed]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22167" started-at="2017-07-19T12:28:39Z" finished-at="2017-07-19T12:29:01Z">
+  <suite name="Default suite" duration-ms="52953" started-at="2017-07-19T13:32:32Z" finished-at="2017-07-19T13:33:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22167" started-at="2017-07-19T12:28:39Z" finished-at="2017-07-19T12:29:01Z">
-      <class name="MyPackage.SetPersonalSettings">
-        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="instantiate" is-config="true" duration-ms="666" started-at="2017-07-19T20:28:39Z" finished-at="2017-07-19T20:28:40Z">
+    <test name="Default test" duration-ms="52953" started-at="2017-07-19T13:32:32Z" finished-at="2017-07-19T13:33:25Z">
+      <class name="MyPackage.CreateQuotation">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="instantiate" is-config="true" duration-ms="640" started-at="2017-07-19T21:32:32Z" finished-at="2017-07-19T21:32:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiate -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="setUp" is-config="true" duration-ms="4205" started-at="2017-07-19T20:28:40Z" finished-at="2017-07-19T20:28:44Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="setUp" is-config="true" duration-ms="4071" started-at="2017-07-19T21:32:33Z" finished-at="2017-07-19T21:32:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="LogintoSystem" duration-ms="13790" started-at="2017-07-19T20:28:44Z" finished-at="2017-07-19T20:28:58Z">
+        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="LogintoSystem" duration-ms="18737" started-at="2017-07-19T21:32:37Z" finished-at="2017-07-19T21:32:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogintoSystem -->
-        <test-method status="PASS" signature="go2personalsettings()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="go2personalsettings" duration-ms="1434" started-at="2017-07-19T20:28:58Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-19T20:28:59Z">
+        <test-method status="PASS" signature="move_to_create_quotation()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="move_to_create_quotation" duration-ms="3626" started-at="2017-07-19T21:32:55Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-19T21:32:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- go2personalsettings -->
-        <test-method status="PASS" signature="setru()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="setru" duration-ms="139" started-at="2017-07-19T20:28:59Z" depends-on-methods="MyPackage.SetPersonalSettings.go2personalsettings" finished-at="2017-07-19T20:28:59Z">
+        </test-method> <!-- move_to_create_quotation -->
+        <test-method status="PASS" signature="add_template()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="add_template" duration-ms="2603" started-at="2017-07-19T21:32:59Z" depends-on-methods="MyPackage.CreateQuotation.move_to_create_quotation" finished-at="2017-07-19T21:33:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setru -->
-        <test-method status="PASS" signature="save()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="save" duration-ms="1900" started-at="2017-07-19T20:28:59Z" depends-on-methods="MyPackage.SetPersonalSettings.setru" finished-at="2017-07-19T20:29:01Z">
-          <reporter-output>
-            <line>
-              <![CDATA[RUSetting saved and Application is closed]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- save -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MyPackage.SetPersonalSettings@523884b2]" name="tearDown" is-config="true" duration-ms="1" started-at="2017-07-19T20:29:01Z" finished-at="2017-07-19T20:29:01Z">
+        </test-method> <!-- add_template -->
+        <test-method status="PASS" signature="select_template()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="select_template" duration-ms="1412" started-at="2017-07-19T21:33:02Z" depends-on-methods="MyPackage.CreateQuotation.add_template" finished-at="2017-07-19T21:33:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- MyPackage.SetPersonalSettings -->
+        </test-method> <!-- select_template -->
+        <test-method status="PASS" signature="click_on_search()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="click_on_search" duration-ms="1482" started-at="2017-07-19T21:33:03Z" depends-on-methods="MyPackage.CreateQuotation.select_template" finished-at="2017-07-19T21:33:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_on_search -->
+        <test-method status="PASS" signature="click_template()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="click_template" duration-ms="4215" started-at="2017-07-19T21:33:05Z" depends-on-methods="MyPackage.CreateQuotation.click_on_search" finished-at="2017-07-19T21:33:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_template -->
+        <test-method status="PASS" signature="prepare_quotation()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="prepare_quotation" duration-ms="16137" started-at="2017-07-19T21:33:09Z" depends-on-methods="MyPackage.CreateQuotation.click_template" finished-at="2017-07-19T21:33:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepare_quotation -->
+      </class> <!-- MyPackage.CreateQuotation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,15 +3,12 @@ package MyPackage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import testcases.SetPersonalSettings;
 
-public class CreateQuotation extends SetPersonalSettings {
+public class CreateQuotation extends MessageBoard {
     
-	@Test(dependsOnMethods={"takefocus"})
+	@Test(dependsOnMethods={"LogintoSystem"})
     void move_to_create_quotation()
     {
            WebElement quotation=driver.findElement(By.xpath("//td[contains(text(),'Quotation')]"));
@@ -59,9 +56,11 @@ public class CreateQuotation extends SetPersonalSettings {
     @Test(dependsOnMethods={"click_template"})
     void prepare_quotation()
     {
-           driver.switchTo().frame("contentFrame");
-           driver.switchTo().frame("confirmdialog");
-           WebElement save=driver.findElement(By.xpath("//div[contains(text(),'Save')]"));
+           //driver.switchTo().frame("contentFrame");
+           //driver.switchTo().frame("confirmdialog");
+           //WebElement save=driver.findElement(By.xpath("//div[contains(text(),'Save')]"));
+           WebElement save=driver.findElement(By.name("DealContextMenu$ProcessSaveButton"));
+           
            save.click();
            //WebDriverWait wait=new WebDriverWait(driver,10);
          //wait.until(ExpectedConditions.presenceOfElementLocated(By.id("DealContextMenu_ProcessSaveButton")));

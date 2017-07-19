@@ -3,13 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="MyPackage.MessageBoard">
+      <class name="MyPackage.CreateQuotation">
         <methods>
+          <include name="select_template"/>
+          <include name="prepare_quotation"/>
+          <include name="click_on_search"/>
+          <include name="click_template"/>
           <include name="LogintoSystem"/>
+          <include name="add_template"/>
+          <include name="move_to_create_quotation"/>
           <include name="setUp"/>
           <include name="instantiate"/>
         </methods>
-      </class> <!-- MyPackage.MessageBoard -->
+      </class> <!-- MyPackage.CreateQuotation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
