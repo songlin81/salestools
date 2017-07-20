@@ -12,4 +12,19 @@
       </class> <!-- MyPackage.MessageBoard -->
     </classes>
   </test> <!-- Landing test(failed) -->
+  <test name="RU test(failed)">
+    <classes>
+      <class name="MyPackage.SetPersonalSettings">
+        <methods>
+          <include name="go2personalsettings"/>
+          <include name="setru"/>
+          <include name="LogintoSystem"/>
+          <include name="setUp"/>
+          <include name="save"/>
+          <include name="tearDown"/>
+          <include name="instantiate"/>
+        </methods>
+      </class> <!-- MyPackage.SetPersonalSettings -->
+    </classes>
+  </test> <!-- RU test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
