@@ -16,11 +16,9 @@
     <classes>
       <class name="MyPackage.SetPersonalSettings">
         <methods>
-          <include name="go2personalsettings"/>
-          <include name="setru"/>
           <include name="LogintoSystem"/>
           <include name="setUp"/>
-          <include name="save"/>
+          <include name="invoke"/>
           <include name="tearDown"/>
           <include name="instantiate"/>
         </methods>

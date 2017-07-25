@@ -150,3 +150,13 @@ Part two. Scheduled task:
 	Configure: Build Triggers->Build periodically(cron format): 0 6 * * 1-5
 	-->“At 06:00 on every day-of-week from Monday through Friday.”
 	-->Would last have run at Wednesday, July 19, 2017 6:00:02 AM CST; would next run at Thursday, July 20, 2017 6:00:02 AM CST.
+
+
+------------------------------------------http://www.seleniumhq.org/docs/04_webdriver_advanced.jsp-------------------
+
+
+----------------------------proxy------------------
+153.112.103.6
+8080
+
+

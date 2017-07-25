@@ -1,49 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52953" started-at="2017-07-19T13:32:32Z" finished-at="2017-07-19T13:33:25Z">
+  <suite name="Default suite" duration-ms="22127" started-at="2017-07-25T04:06:12Z" finished-at="2017-07-25T04:06:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52953" started-at="2017-07-19T13:32:32Z" finished-at="2017-07-19T13:33:25Z">
-      <class name="MyPackage.CreateQuotation">
-        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="instantiate" is-config="true" duration-ms="640" started-at="2017-07-19T21:32:32Z" finished-at="2017-07-19T21:32:33Z">
+    <test name="Default test" duration-ms="22127" started-at="2017-07-25T04:06:12Z" finished-at="2017-07-25T04:06:34Z">
+      <class name="MyPackage.OpenQuotation">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="instantiate" is-config="true" duration-ms="710" started-at="2017-07-25T12:06:12Z" finished-at="2017-07-25T12:06:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiate -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="setUp" is-config="true" duration-ms="4071" started-at="2017-07-19T21:32:33Z" finished-at="2017-07-19T21:32:37Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="setUp" is-config="true" duration-ms="4109" started-at="2017-07-25T12:06:12Z" finished-at="2017-07-25T12:06:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="LogintoSystem" duration-ms="18737" started-at="2017-07-19T21:32:37Z" finished-at="2017-07-19T21:32:55Z">
+        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="LogintoSystem" duration-ms="12705" started-at="2017-07-25T12:06:16Z" finished-at="2017-07-25T12:06:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogintoSystem -->
-        <test-method status="PASS" signature="move_to_create_quotation()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="move_to_create_quotation" duration-ms="3626" started-at="2017-07-19T21:32:55Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-19T21:32:59Z">
+        <test-method status="PASS" signature="move_to_open_quotation()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="move_to_open_quotation" duration-ms="3226" started-at="2017-07-25T12:06:29Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-25T12:06:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- move_to_create_quotation -->
-        <test-method status="PASS" signature="add_template()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="add_template" duration-ms="2603" started-at="2017-07-19T21:32:59Z" depends-on-methods="MyPackage.CreateQuotation.move_to_create_quotation" finished-at="2017-07-19T21:33:02Z">
+        </test-method> <!-- move_to_open_quotation -->
+        <test-method status="PASS" signature="check_inquiry()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="check_inquiry" duration-ms="1350" started-at="2017-07-25T12:06:32Z" depends-on-methods="MyPackage.OpenQuotation.move_to_open_quotation" finished-at="2017-07-25T12:06:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- add_template -->
-        <test-method status="PASS" signature="select_template()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="select_template" duration-ms="1412" started-at="2017-07-19T21:33:02Z" depends-on-methods="MyPackage.CreateQuotation.add_template" finished-at="2017-07-19T21:33:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- select_template -->
-        <test-method status="PASS" signature="click_on_search()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="click_on_search" duration-ms="1482" started-at="2017-07-19T21:33:03Z" depends-on-methods="MyPackage.CreateQuotation.select_template" finished-at="2017-07-19T21:33:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- click_on_search -->
-        <test-method status="PASS" signature="click_template()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="click_template" duration-ms="4215" started-at="2017-07-19T21:33:05Z" depends-on-methods="MyPackage.CreateQuotation.click_on_search" finished-at="2017-07-19T21:33:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- click_template -->
-        <test-method status="PASS" signature="prepare_quotation()[pri:0, instance:MyPackage.CreateQuotation@4501b7af]" name="prepare_quotation" duration-ms="16137" started-at="2017-07-19T21:33:09Z" depends-on-methods="MyPackage.CreateQuotation.click_template" finished-at="2017-07-19T21:33:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepare_quotation -->
-      </class> <!-- MyPackage.CreateQuotation -->
+        </test-method> <!-- check_inquiry -->
+      </class> <!-- MyPackage.OpenQuotation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

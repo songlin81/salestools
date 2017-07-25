@@ -22,7 +22,7 @@ public class MessageBoard {
 	@BeforeTest
 	public void instantiate()
 	{	
-		dr=new Driver("C:\\selenium\\drv.xlsx");
+		dr=new Driver("C:\\Git\\MyProject\\sources\\drv.xlsx");
 		mp = dr.getMap();
 	}
 	
