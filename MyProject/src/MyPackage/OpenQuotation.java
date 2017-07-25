@@ -64,6 +64,11 @@ public class OpenQuotation extends MessageBoard {
         	driver.quit();
     		Assert.assertTrue(false);
         }
+        
+        //for demo
+        //select * from CalculationRow_Inquiry where CalculationRowId='62904985-5530-45F5-91BF-B9B1021DC601'
+        //update CalculationRow_Inquiry set CalculationRowId='565A28F4-638B-4012-8834-10AD4A4B8126' where id='8BD416C1-620A-43E9-9DC1-71DD1992440D'
+        //update CalculationRow_Inquiry set CalculationRowId='62904985-5530-45F5-91BF-B9B1021DC601' where id='8BD416C1-620A-43E9-9DC1-71DD1992440D'
     }
 //    
 //    @Test(dependsOnMethods={"add_template"})
