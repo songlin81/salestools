@@ -16,7 +16,7 @@ public class OpenQuotation extends MessageBoard {
     void move_to_open_quotation()
     {
 			driver.switchTo().frame("contentFrame");     
-			WebElement getQuotationId=driver.findElement(By.xpath("//a[contains(text(), 'NJ2017005760-JK1')]"));
+			WebElement getQuotationId=driver.findElement(By.xpath("//a[contains(text(), 'NJ2017005793-JK1')]"));
 			Actions action=new Actions(driver);
 			action.moveToElement(getQuotationId).click().build().perform();
 			driver.switchTo().defaultContent();
@@ -42,7 +42,7 @@ public class OpenQuotation extends MessageBoard {
         	}
         	
         	try {
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
