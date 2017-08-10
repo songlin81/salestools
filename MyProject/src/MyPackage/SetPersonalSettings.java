@@ -20,6 +20,7 @@ import org.openqa.selenium.OutputType;
 
 import MyPackage.MessageBoard;
 
+
 public class SetPersonalSettings extends MessageBoard
 {
 	  @Test(dependsOnMethods={"LogintoSystem"})
