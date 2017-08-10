@@ -1,72 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59692" started-at="2017-07-26T14:06:34Z" finished-at="2017-07-26T14:07:34Z">
+  <suite name="Default suite" duration-ms="12220" started-at="2017-08-02T06:35:20Z" finished-at="2017-08-02T06:35:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59692" started-at="2017-07-26T14:06:34Z" finished-at="2017-07-26T14:07:34Z">
-      <class name="MyPackage.OpenQuotation">
-        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="instantiate" is-config="true" duration-ms="738" started-at="2017-07-26T22:06:34Z" finished-at="2017-07-26T22:06:35Z">
+    <test name="Default test" duration-ms="12220" started-at="2017-08-02T06:35:20Z" finished-at="2017-08-02T06:35:33Z">
+      <class name="MyPackage.MessageBoard">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:MyPackage.MessageBoard@28d25987]" name="instantiate" is-config="true" duration-ms="842" started-at="2017-08-02T14:35:20Z" finished-at="2017-08-02T14:35:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiate -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="setUp" is-config="true" duration-ms="4088" started-at="2017-07-26T22:06:35Z" finished-at="2017-07-26T22:06:39Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MyPackage.MessageBoard@28d25987]" name="setUp" is-config="true" duration-ms="4479" started-at="2017-08-02T14:35:21Z" finished-at="2017-08-02T14:35:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="LogintoSystem" duration-ms="14735" started-at="2017-07-26T22:06:39Z" finished-at="2017-07-26T22:06:53Z">
+        <test-method status="PASS" signature="LogintoSystem()[pri:0, instance:MyPackage.MessageBoard@28d25987]" name="LogintoSystem" duration-ms="6878" started-at="2017-08-02T14:35:26Z" finished-at="2017-08-02T14:35:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogintoSystem -->
-        <test-method status="PASS" signature="move_to_open_quotation()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="move_to_open_quotation" duration-ms="3473" started-at="2017-07-26T22:06:54Z" depends-on-methods="MyPackage.MessageBoard.LogintoSystem" finished-at="2017-07-26T22:06:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- move_to_open_quotation -->
-        <test-method status="FAIL" signature="check_inquiry()[pri:0, instance:MyPackage.OpenQuotation@4501b7af]" name="check_inquiry" duration-ms="36629" started-at="2017-07-26T22:06:57Z" depends-on-methods="MyPackage.OpenQuotation.move_to_open_quotation" finished-at="2017-07-26T22:07:34Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertTrue(Assert.java:41)
-	at org.testng.Assert.assertTrue(Assert.java:51)
-	at MyPackage.OpenQuotation.check_inquiry(OpenQuotation.java:65)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check_inquiry -->
-      </class> <!-- MyPackage.OpenQuotation -->
+      </class> <!-- MyPackage.MessageBoard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
